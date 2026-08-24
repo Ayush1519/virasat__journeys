@@ -1,0 +1,189 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-display: "Fraunces", "Playfair Display", serif;
+  --font-sans: "Plus Jakarta Sans", "Inter", system-ui, sans-serif;
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-saffron: var(--saffron);
+  --color-saffron-deep: var(--saffron-deep);
+  --color-indigo-royal: var(--indigo-royal);
+  --color-gold: var(--gold);
+  --color-ivory: var(--ivory);
+
+  --animate-fade-in: fade-in 0.6s ease-out;
+  --animate-slide-up: slide-up 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-shimmer: shimmer 3s linear infinite;
+  --animate-spin-slow: spin 30s linear infinite;
+}
+
+:root {
+  --radius: 1rem;
+
+  --ivory: oklch(0.985 0.012 85);
+  --background: oklch(0.985 0.012 85);
+  --foreground: oklch(0.18 0.05 270);
+
+  --saffron: oklch(0.74 0.18 55);
+  --saffron-deep: oklch(0.66 0.21 42);
+  --indigo-royal: oklch(0.28 0.14 275);
+  --gold: oklch(0.82 0.15 85);
+
+  --card: oklch(0.99 0.008 85 / 0.7);
+  --card-foreground: oklch(0.18 0.05 270);
+  --popover: oklch(0.99 0.008 85);
+  --popover-foreground: oklch(0.18 0.05 270);
+
+  --primary: oklch(0.74 0.18 55);
+  --primary-foreground: oklch(0.99 0.008 85);
+  --secondary: oklch(0.28 0.14 275);
+  --secondary-foreground: oklch(0.985 0.012 85);
+
+  --muted: oklch(0.94 0.015 80);
+  --muted-foreground: oklch(0.45 0.04 270);
+  --accent: oklch(0.82 0.15 85);
+  --accent-foreground: oklch(0.18 0.05 270);
+
+  --destructive: oklch(0.6 0.22 27);
+  --destructive-foreground: oklch(0.985 0.012 85);
+  --border: oklch(0.88 0.02 80);
+  --input: oklch(0.92 0.015 80);
+  --ring: oklch(0.74 0.18 55);
+
+  --gradient-hero: linear-gradient(135deg, oklch(0.74 0.18 55) 0%, oklch(0.66 0.21 42) 50%, oklch(0.28 0.14 275) 100%);
+  --gradient-saffron: linear-gradient(135deg, oklch(0.82 0.15 85) 0%, oklch(0.74 0.18 55) 100%);
+  --gradient-royal: linear-gradient(135deg, oklch(0.28 0.14 275) 0%, oklch(0.45 0.2 290) 100%);
+  --gradient-warm: linear-gradient(180deg, oklch(0.985 0.012 85) 0%, oklch(0.96 0.03 75) 100%);
+
+  --shadow-soft: 0 4px 20px -4px oklch(0.28 0.14 275 / 0.12);
+  --shadow-glow: 0 0 40px -8px oklch(0.74 0.18 55 / 0.45);
+  --shadow-deep: 0 20px 50px -15px oklch(0.28 0.14 275 / 0.25);
+  --shadow-card: 0 8px 30px -10px oklch(0.28 0.14 275 / 0.18);
+}
+
+.dark {
+  --background: oklch(0.14 0.03 270);
+  --foreground: oklch(0.96 0.015 85);
+  --card: oklch(0.2 0.04 275 / 0.6);
+  --card-foreground: oklch(0.96 0.015 85);
+  --popover: oklch(0.2 0.04 275);
+  --popover-foreground: oklch(0.96 0.015 85);
+  --primary: oklch(0.78 0.18 55);
+  --primary-foreground: oklch(0.14 0.03 270);
+  --secondary: oklch(0.35 0.15 280);
+  --secondary-foreground: oklch(0.96 0.015 85);
+  --muted: oklch(0.24 0.04 275);
+  --muted-foreground: oklch(0.72 0.03 85);
+  --accent: oklch(0.82 0.15 85);
+  --accent-foreground: oklch(0.14 0.03 270);
+  --border: oklch(1 0 0 / 0.1);
+  --input: oklch(1 0 0 / 0.15);
+  --ring: oklch(0.78 0.18 55);
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+  body {
+    background: var(--gradient-warm);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01", "cv11";
+  }
+  h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: -0.02em; }
+}
+
+@layer utilities {
+  .glass {
+    background: oklch(1 0 0 / 0.55);
+    backdrop-filter: blur(20px) saturate(1.4);
+    -webkit-backdrop-filter: blur(20px) saturate(1.4);
+    border: 1px solid oklch(1 0 0 / 0.6);
+  }
+  .glass-dark {
+    background: oklch(0.18 0.05 270 / 0.4);
+    backdrop-filter: blur(20px) saturate(1.4);
+    border: 1px solid oklch(1 0 0 / 0.1);
+  }
+  .gradient-hero { background: var(--gradient-hero); }
+  .gradient-saffron { background: var(--gradient-saffron); }
+  .gradient-royal { background: var(--gradient-royal); }
+  .text-gradient-hero {
+    background: var(--gradient-hero);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .text-gradient-saffron {
+    background: var(--gradient-saffron);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .shadow-soft { box-shadow: var(--shadow-soft); }
+  .shadow-glow { box-shadow: var(--shadow-glow); }
+  .shadow-deep { box-shadow: var(--shadow-deep); }
+  .shadow-card { box-shadow: var(--shadow-card); }
+  .hover-lift { transition: transform 0.4s cubic-bezier(0.16,1,0.3,1), box-shadow 0.4s; }
+  .hover-lift:hover { transform: translateY(-6px); box-shadow: var(--shadow-deep); }
+  .mandala-bg {
+    background-image: url("/src/assets/mandala-pattern.png");
+    background-size: 600px;
+    background-repeat: repeat;
+    opacity: 0.06;
+  }
+  .shimmer-text {
+    background: linear-gradient(90deg, var(--saffron) 0%, var(--gold) 50%, var(--saffron) 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: var(--animate-shimmer);
+  }
+}
