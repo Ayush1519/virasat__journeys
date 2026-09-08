@@ -2,8 +2,8 @@
 
 > **Tagline:** *Explore India's Rich Heritage in an Interactive, Fun, and Immersive Way.*
 
-🔗 **Live Website:** [Insert Live Link Here](https://virasatjourneys-nine.vercel.app/)  
-💻 **Source Code:** [Insert GitHub Link Here](https://github.com/Ayush1519/virasat__journeys.git)
+🔗 **Live Website:** [Live Link](https://virasatjourneys-nine.vercel.app/)  
+💻 **Source Code:** [GitHub Link](https://github.com/Ayush1519/virasat__journeys.git)
 
 ---
 
