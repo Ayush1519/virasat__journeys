@@ -1,4 +1,4 @@
-# 🇮🇳 Virasat 
+# Virasat 
 
 > **Tagline:** *Explore India's Rich Heritage in an Interactive, Fun, and Immersive Way.*
 
@@ -8,7 +8,7 @@
 ---
 
 ## 📌 About the Project
-**Virasat Journeys** is an interactive digital heritage portal built for the Smart India Hackathon (SIH). It bridges the generational gap between youth and cultural history by transforming static textbook history into an engaging, multi-sensory digital experience. Combining glassmorphism aesthetics, Indian cultural motifs, and modern web architecture, Virasat offers children and students a vibrant playground to learn about historical monuments, regional folklore, authentic cuisine, traditional clothing, and music.
+**Virasat Journeys** is an interactive digital heritage portal. It bridges the generational gap between youth and cultural history by transforming static textbook history into an engaging, multi-sensory digital experience. Combining glassmorphism aesthetics, Indian cultural motifs, and modern web architecture, Virasat offers children and students a vibrant playground to learn about historical monuments, regional folklore, authentic cuisine, traditional clothing, and music.
 
 ---
 
